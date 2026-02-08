@@ -229,7 +229,9 @@ function App() {
             >
               High Priority
             </button>
-            <button 
+          </div>
+        </div>
+        
         <div className="progress-bar">
           <div 
             className="progress-fill" 
