@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import data from './data'
 
-const viceroysData = data.viceroys
+const soilsData = data.soilTypes
 const quizQuestions = data.quizQuestions
 
 function App() {
@@ -11,19 +11,19 @@ function App() {
   const [quizAnswers, setQuizAnswers] = useState([])
   const [selectedAnswer, setSelectedAnswer] = useState(null)
   const [showResult, setShowResult] = useState(false)
-  const [masteredViceroys, setMasteredViceroys] = useState([])
+  const [masteredSoils, setMasteredSoils] = useState([])
   const [filter, setFilter] = useState('all')
   const [flipped, setFlipped] = useState(false)
   const [showNavigator, setShowNavigator] = useState(false)
 
   useEffect(() => {
-    const saved = localStorage.getItem('viceroysProgress')
+    const saved = localStorage.getItem('soilsProgress')
     if (saved) {
       const data = JSON.parse(saved)
-      setMasteredViceroys(data.masteredViceroys || [])
+      setMasteredSoils(data.masteredSoils || [])
     }
 
-    const savedQuiz = localStorage.getItem('viceroysQuizState')
+    const savedQuiz = localStorage.getItem('soilsQuizState')
     if (savedQuiz && mode === 'quiz') {
       const quizData = JSON.parse(savedQuiz)
       setCurrentIndex(quizData.currentIndex || 0)
@@ -33,13 +33,13 @@ function App() {
   }, [mode])
 
   const saveProgress = (mastered) => {
-    localStorage.setItem('viceroysProgress', JSON.stringify({
-      masteredViceroys: mastered
+    localStorage.setItem('soilsProgress', JSON.stringify({
+      masteredSoils: mastered
     }))
   }
 
   const saveQuizState = (index, currentScore, answers) => {
-    localStorage.setItem('viceroysQuizState', JSON.stringify({
+    localStorage.setItem('soilsQuizState', JSON.stringify({
       currentIndex: index,
       score: currentScore,
       quizAnswers: answers
@@ -47,7 +47,7 @@ function App() {
   }
 
   const resetQuiz = () => {
-    localStorage.removeItem('viceroysQuizState')
+    localStorage.removeItem('soilsQuizState')
     setCurrentIndex(0)
     setScore(0)
     setQuizAnswers([])
@@ -65,10 +65,13 @@ function App() {
     setShowResult(false)
   }
 
-  const getFilteredViceroys = () => {
-    if (filter === 'all') return viceroysData
-    if (filter === 'high') return viceroysData.filter(v => v.importance === 'HIGH')
-    return viceroysData
+  const getFilteredSoils = () => {
+    if (filter === 'all') return soilsData
+    if (filter === 'high') return soilsData.filter(s => s.importance === 'HIGH')
+    if (filter === 'alluvial') return soilsData.filter(s => s.name.includes('Alluvial'))
+    if (filter === 'black') return soilsData.filter(s => s.name.includes('Black'))
+    if (filter === 'red') return soilsData.filter(s => s.name.includes('Red') || s.name.includes('Yellow'))
+    return soilsData
   }
 
   const handleQuizAnswer = (answerIndex) => {
@@ -124,7 +127,7 @@ function App() {
       saveQuizState(nextIndex, score, quizAnswers)
     } else if (quizAnswers.length === quizQuestions.length) {
       setShowResult(true)
-      localStorage.removeItem('viceroysQuizState')
+      localStorage.removeItem('soilsQuizState')
     }
   }
 
@@ -155,13 +158,13 @@ function App() {
       <div className="mode-card" onClick={() => setMode('flashcards')}>
         <div className="mode-icon">🗂️</div>
         <h3>Flashcards</h3>
-        <p>Learn viceroys with interactive flashcards</p>
+        <p>Learn soils with interactive flashcards</p>
       </div>
       
       <div className="mode-card" onClick={() => setMode('browse')}>
         <div className="mode-icon">📚</div>
-        <h3>Browse Viceroys</h3>
-        <p>Explore all viceroys with detailed information</p>
+        <h3>Browse Soils</h3>
+        <p>Explore all soils with detailed information</p>
       </div>
       
       <div className="mode-card" onClick={() => setMode('quiz')}>
@@ -179,14 +182,14 @@ function App() {
   )
 
   const renderFlashcards = () => {
-    const viceroys = getFilteredViceroys()
-    if (viceroys.length === 0) return <p>No viceroys match this filter.</p>
+    const soils = getFilteredSoils()
+    if (soils.length === 0) return <p>No soils match this filter.</p>
 
-    const viceroy = viceroys[currentIndex]
-    const isMastered = masteredViceroys.includes(viceroy.name)
+    const soil = soils[currentIndex]
+    const isMastered = masteredSoils.includes(soil.name)
 
     const nextCard = () => {
-      if (currentIndex < viceroys.length - 1) {
+      if (currentIndex < soils.length - 1) {
         setCurrentIndex(currentIndex + 1)
         setFlipped(false)
       }
@@ -200,13 +203,13 @@ function App() {
     }
 
     const markAsMastered = () => {
-      if (masteredViceroys.includes(viceroy.name)) {
-        const updated = masteredViceroys.filter(name => name !== viceroy.name)
-        setMasteredViceroys(updated)
+      if (masteredSoils.includes(soil.name)) {
+        const updated = masteredSoils.filter(name => name !== soil.name)
+        setMasteredSoils(updated)
         saveProgress(updated)
       } else {
-        const updated = [...masteredViceroys, viceroy.name]
-        setMasteredViceroys(updated)
+        const updated = [...masteredSoils, soil.name]
+        setMasteredSoils(updated)
         saveProgress(updated)
         nextCard()
       }
@@ -221,7 +224,7 @@ function App() {
               className={`filter-btn ${filter === 'all' ? 'active' : ''}`}
               onClick={() => { setFilter('all'); setCurrentIndex(0); }}
             >
-              All ({viceroysData.length})
+              All ({soilsData.length})
             </button>
             <button 
               className={`filter-btn ${filter === 'high' ? 'active' : ''}`}
@@ -253,7 +256,7 @@ function App() {
         <div className="progress-bar">
           <div 
             className="progress-fill" 
-            style={{width: `${((currentIndex + 1) / viceroys.length) * 100}%`}}
+            style={{width: `${((currentIndex + 1) / soils.length) * 100}%`}}
           />
         </div>
 
@@ -264,26 +267,28 @@ function App() {
           >
             <div className="flashcard-front">
               <h2 style={{fontSize: '2.5rem', marginBottom: '20px', color: '#1a3a0f'}}>
-                {viceroy.name}
+                {soil.name}
               </h2>
-              <div style={{fontSize: '1.2rem', color: '#8b0000', marginBottom: '15px'}}>
-                {viceroy.period}
+              <div style={{fontSize: '1.2rem', color: '#558b2f', marginBottom: '15px'}}>
+                {soil.category}
               </div>
+              {soil.season && (
+                <div style={{fontSize: '1.1rem', color: '#7cb342'}}>
+                  Season: {soil.season}
+                </div>
+              )}
               <p className="flashcard-hint">👆 Tap to flip</p>
             </div>
             <div className="flashcard-back">
               <div style={{textAlign: 'left', width: '100%'}}>
-                <div className="viceroy-info"><strong>Period:</strong> {viceroy.period}</div>
-                <div className="viceroy-info"><strong>Key Events:</strong></div>
-                <ul style={{margin: '5px 0', paddingLeft: '20px', fontSize: '0.9rem'}}>
-                  {viceroy.keyEvents?.slice(0, 4).map((event, i) => <li key={i}>{event}</li>)}
-                </ul>
-                {viceroy.keyReforms && viceroy.keyReforms.length > 0 && (
-                  <div className="viceroy-info" style={{marginTop: '10px'}}><strong>Key Reforms:</strong> {viceroy.keyReforms.join('; ')}</div>
-                )}
-                {viceroy.specialNote && (
-                  <div className="viceroy-info" style={{marginTop: '10px', fontStyle: 'italic', fontSize: '0.85rem'}}><strong>Note:</strong> {viceroy.specialNote}</div>
-                )}
+                <div className="soil-info"><strong>Category:</strong> {soil.category}</div>
+                {soil.rainfall && <div className="soil-info"><strong>Rainfall:</strong> {soil.rainfall}</div>}
+                {soil.temperature && <div className="soil-info"><strong>Temperature:</strong> {soil.temperature}</div>}
+                {soil.altitude && <div className="soil-info"><strong>Altitude:</strong> {soil.altitude}</div>}
+                {soil.percentageArea && <div className="soil-info"><strong>% of Total Area:</strong> {soil.percentageArea}</div>}
+                <div className="soil-info" style={{marginTop: '10px', fontSize: '0.85rem', fontStyle: 'italic'}}>
+                  <strong>Importance:</strong> {soil.importance}
+                </div>
               </div>
             </div>
           </div>
@@ -308,14 +313,14 @@ function App() {
           <button 
             className="btn btn-secondary" 
             onClick={nextCard}
-            disabled={currentIndex === viceroys.length - 1}
+            disabled={currentIndex === soils.length - 1}
           >
             Next ➡️
           </button>
         </div>
 
         <div style={{textAlign: 'center', marginTop: '20px', color: '#1a3a0f', fontSize: '1.1rem'}}>
-          Card {currentIndex + 1} of {viceroys.length}
+          Card {currentIndex + 1} of {soils.length}
           {isMastered && <span style={{marginLeft: '15px', color: '#558b2f'}}>✓ Mastered</span>}
         </div>
       </div>
@@ -323,7 +328,7 @@ function App() {
   }
 
   const renderBrowse = () => {
-    const viceroys = getFilteredViceroys()
+    const soils = getFilteredSoils()
 
     return (
       <div>
@@ -334,7 +339,7 @@ function App() {
               className={`filter-btn ${filter === 'all' ? 'active' : ''}`}
               onClick={() => setFilter('all')}
             >
-              All ({viceroysData.length})
+              All ({soilsData.length})
             </button>
             <button 
               className={`filter-btn ${filter === 'high' ? 'active' : ''}`}
@@ -364,28 +369,27 @@ function App() {
         </div>
 
         <h2 style={{marginBottom: '20px', color: '#1a3a0f'}}>
-          {viceroys.length} Viceroy(s) Found
+          {soils.length} Soil(s) Found
         </h2>
 
-        <div className="viceroys-grid">
-          {viceroys.map(viceroy => (
-            <div key={viceroy.id} className="viceroy-card">
-              <h3>{viceroy.name}</h3>
+        <div className="soils-grid">
+          {soils.map(soil => (
+            <div key={soil.id} className="soil-card">
+              <h3>{soil.name}</h3>
               <div className="tags">
-                <span className="tag">{viceroy.period}</span>
-                <span className={`tag ${viceroy.importance === 'HIGH' ? 'high' : ''}`}>
-                  {viceroy.importance}
+                <span className="tag">{soil.category}</span>
+                <span className={`tag ${soil.importance === 'HIGH' ? 'high' : ''}`}>
+                  {soil.importance}
                 </span>
+                {soil.percentageArea && <span className="tag">{soil.percentageArea}</span>}
               </div>
-              <div className="viceroy-info"><strong>Key Events:</strong></div>
+              {soil.rainfall && <div className="soil-info"><strong>Rainfall:</strong> {soil.rainfall}</div>}
+              {soil.temperature && <div className="soil-info"><strong>Temperature:</strong> {soil.temperature}</div>}
+              {soil.altitude && <div className="soil-info"><strong>Altitude:</strong> {soil.altitude}</div>}
+              <div className="soil-info"><strong>Characteristics:</strong></div>
               <ul style={{margin: '5px 0', paddingLeft: '20px', fontSize: '0.85rem'}}>
-                {viceroy.keyEvents?.slice(0, 3).map((event, i) => <li key={i}>{event}</li>)}
+                {soil.characteristics?.slice(0, 2).map((char, i) => <li key={i}>{char.substring(0, 100)}...</li>)}
               </ul>
-              {viceroy.keyReforms && viceroy.keyReforms.length > 0 && (
-                <div className="viceroy-info" style={{marginTop: '8px', fontSize: '0.85rem', fontStyle: 'italic'}}>
-                  <strong>Reforms:</strong> {viceroy.keyReforms[0]}
-                </div>
-              )}
             </div>
           ))}
         </div>
@@ -647,10 +651,10 @@ function App() {
   }
 
   const renderProgress = () => {
-    const totalViceroys = viceroysData.length
-    const masteredCount = masteredViceroys.length
-    const progress = ((masteredCount / totalViceroys) * 100).toFixed(0)
-    const highPriority = viceroysData.filter(c => c.importance === 'HIGH').length
+    const totalSoils = soilsData.length
+    const masteredCount = masteredSoils.length
+    const progress = ((masteredCount / totalSoils) * 100).toFixed(0)
+    const highPriority = soilsData.filter(c => c.importance === 'HIGH').length
 
     return (
       <div>
@@ -658,8 +662,8 @@ function App() {
         
         <div className="stats">
           <div className="stat-card">
-            <h4>Total Viceroys</h4>
-            <div className="value">{totalViceroys}</div>
+            <h4>Total Soils</h4>
+            <div className="value">{totalSoils}</div>
           </div>
           <div className="stat-card">
             <h4>Mastered</h4>
@@ -667,7 +671,7 @@ function App() {
           </div>
           <div className="stat-card">
             <h4>Remaining</h4>
-            <div className="value" style={{color: '#f57c00'}}>{totalViceroys - masteredCount}</div>
+            <div className="value" style={{color: '#f57c00'}}>{totalSoils - masteredCount}</div>
           </div>
           <div className="stat-card">
             <h4>High Priority</h4>
@@ -694,11 +698,11 @@ function App() {
           </div>
         </div>
 
-        {masteredViceroys.length > 0 && (
+        {masteredSoils.length > 0 && (
           <div style={{marginTop: '30px'}}>
-            <h3 style={{marginBottom: '15px', color: '#1a3a0f'}}>Mastered Viceroys ({masteredCount})</h3>
+            <h3 style={{marginBottom: '15px', color: '#1a3a0f'}}>Mastered Soils ({masteredCount})</h3>
             <div style={{display: 'flex', flexWrap: 'wrap', gap: '10px'}}>
-              {masteredViceroys.map((name, idx) => (
+              {masteredSoils.map((name, idx) => (
                 <span key={idx} className="tag" style={{fontSize: '0.95rem', padding: '8px 16px'}}>
                   ✓ {name}
                 </span>
@@ -712,8 +716,8 @@ function App() {
             className="btn btn-danger" 
             onClick={() => {
               if (confirm('Are you sure you want to reset all progress?')) {
-                setMasteredViceroys([])
-                localStorage.removeItem('viceroysProgress')
+                setMasteredSoils([])
+                localStorage.removeItem('soilsProgress')
               }
             }}
           >
@@ -728,8 +732,8 @@ function App() {
     <div className="app">
       <div className="container">
         <div className="header">
-          <h1>🌳 Viceroys of India - UPSC Prep</h1>
-          <p>Master viceroy types, vegetation zones & ecological diversity</p>
+          <h1>🌳 Soils of India - UPSC Prep</h1>
+          <p>Master soil types, vegetation zones & ecological diversity</p>
         </div>
 
         {!mode && renderModeSelector()}
