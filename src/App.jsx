@@ -229,24 +229,6 @@ function App() {
             >
               High Priority
             </button>
-            <button 
-              className={`filter-btn ${filter === 'alluvial' ? 'active' : ''}`}
-              onClick={() => { setFilter('alluvial'); setCurrentIndex(0); }}
-            >
-              Alluvial
-            </button>
-            <button 
-              className={`filter-btn ${filter === 'black' ? 'active' : ''}`}
-              onClick={() => { setFilter('black'); setCurrentIndex(0); }}
-            >
-              Black/Regur
-            </button>
-            <button 
-              className={`filter-btn ${filter === 'red' ? 'active' : ''}`}
-              onClick={() => { setFilter('red'); setCurrentIndex(0); }}
-            >
-              Red/Yellow
-            </button>
           </div>
         </div>
 
@@ -341,24 +323,6 @@ function App() {
               onClick={() => setFilter('high')}
             >
               High Priority
-            </button>
-            <button 
-              className={`filter-btn ${filter === 'alluvial' ? 'active' : ''}`}
-              onClick={() => setFilter('alluvial')}
-            >
-              Alluvial
-            </button>
-            <button 
-              className={`filter-btn ${filter === 'black' ? 'active' : ''}`}
-              onClick={() => setFilter('black')}
-            >
-              Black/Regur
-            </button>
-            <button 
-              className={`filter-btn ${filter === 'red' ? 'active' : ''}`}
-              onClick={() => setFilter('red')}
-            >
-              Red/Yellow
             </button>
           </div>
         </div>
