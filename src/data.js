@@ -1,11 +1,425 @@
-// Viceroys of India - Comprehensive Data from PDF Page 4
-// Source: Modern India study material
+// Viceroys and Governor-Generals of India - Complete Data from PDF Pages 1-4
+// Total: 35 Governor-Generals & Viceroys (1757-1947)
 
 export const viceroys = [
+  // PAGE 1 - Early Governor-Generals
   {
     id: 1,
+    name: "Robert Clive",
+    period: "1757-1760, 1765-1767",
+    era: "Early Period",
+    keyEvents: [
+      "Battle of Plassey (1757)",
+      "Battle of Buxar (1764)"
+    ],
+    keyReforms: [
+      "First British Governor of Bengal Presidency"
+    ],
+    importance: "HIGH"
+  },
+  {
+    id: 2,
+    name: "Warren Hastings",
+    period: "1773-1785",
+    era: "Early Period",
+    keyEvents: [
+      "Rohilla War (1774)",
+      "First Maratha War (1775-1782)",
+      "Treaty of Salbai (1782)",
+      "Second Mysore War (1780-1784)"
+    ],
+    keyReforms: [
+      "Regulating Act of 1773",
+      "Act of 1781 (jurisdictional powers)",
+      "Pitt's India Act of 1784",
+      "Foundation of Asiatic Society of Bengal (1784)",
+      "Established Calcutta Madrasa",
+      "Abolished Dual System",
+      "Established Diwani and Faujdari Adalat",
+      "Created Supreme Court"
+    ],
+    importance: "HIGH"
+  },
+  {
+    id: 3,
+    name: "Lord Cornwallis",
+    period: "1786-1793",
+    era: "Early Period",
+    keyEvents: [
+      "Third Mysore War (1790-1792)",
+      "Treaty of Seringapatam (1792)"
+    ],
+    keyReforms: [
+      "Cornwallis Code (1793)",
+      "Permanent Settlement of Bengal (1793)",
+      "Europeanisation of administration",
+      "Introduction of civil services",
+      "Separated revenue from justice administration",
+      "Reduced revenue districts from 35 to 23",
+      "Removed police power from Zamindars"
+    ],
+    importance: "HIGH"
+  },
+  {
+    id: 4,
+    name: "Sir John Shore",
+    period: "1793-1798",
+    era: "Early Period",
+    keyEvents: [
+      "Battle of Kharda (1795)"
+    ],
+    keyReforms: [
+      "Charter Act of 1793 (regulation of East India Company)"
+    ],
+    importance: "MEDIUM"
+  },
+  {
+    id: 5,
+    name: "Lord Wellesley",
+    period: "1798-1805",
+    era: "Early Period",
+    keyEvents: [
+      "Fourth Mysore War (1799)",
+      "Second Anglo-Maratha War (1803-1805)",
+      "Treaty of Bassein (1802)"
+    ],
+    keyReforms: [
+      "Initiated Subsidiary Alliance",
+      "Nizam Ali of Hyderabad first to accept (1798)",
+      "Formed Madras Presidency",
+      "Established Fort William College at Calcutta"
+    ],
+    importance: "HIGH"
+  },
+  
+  // PAGE 2 - Mid Period Governor-Generals
+  {
+    id: 6,
+    name: "Sir George Barlow",
+    period: "1805-1807",
+    era: "Mid Period",
+    keyEvents: [
+      "Vellore Mutiny (1806)"
+    ],
+    importance: "MEDIUM"
+  },
+  {
+    id: 7,
+    name: "Lord Minto I",
+    period: "1807-1813",
+    era: "Mid Period",
+    keyEvents: [
+      "Treaty of Amritsar with Ranjit Singh (1809)"
+    ],
+    importance: "MEDIUM"
+  },
+  {
+    id: 8,
+    name: "Lord Hastings",
+    period: "1813-1823",
+    era: "Mid Period",
+    keyEvents: [
+      "Anglo-Nepal War (1814-1816)",
+      "Treaty of Sagauli (1816)",
+      "Third Maratha War (1817-1819)",
+      "Treaty with Sindhia (1817)"
+    ],
+    keyReforms: [
+      "Adopted interventionist policies",
+      "Introduced Ryotwari settlement in Madras (1820)"
+    ],
+    importance: "HIGH"
+  },
+  {
+    id: 9,
+    name: "Lord Amherst",
+    period: "1823-1828",
+    era: "Mid Period",
+    keyEvents: [
+      "First Burmese War (1824-1826)",
+      "Capture of Bharatpur (1826)"
+    ],
+    importance: "MEDIUM"
+  },
+  {
+    id: 10,
+    name: "Lord William Bentinck",
+    period: "1828-1835",
+    era: "Mid Period",
+    keyEvents: [
+      "Annexation of Mysore (1831)",
+      "Annexation of Coorg (1834)",
+      "Treaty with Ranjit Singh (1831)",
+      "Suppression of Thuggee (1830)"
+    ],
+    keyReforms: [
+      "Charter Act of 1833",
+      "Bengal Sati Regulation (1829) - Abolished Sati",
+      "Female Infanticide made illegal",
+      "Charter Act (1833) allowed Indians to hold public office",
+      "Promoted English education",
+      "Established Calcutta Medical College (1835)",
+      "Abolished Cornwallis provisions"
+    ],
+    specialNote: "Father of Modern Western Education in India; Charter Act 1833 designated Governor General of Bengal as Governor General of India",
+    importance: "HIGH"
+  },
+  {
+    id: 11,
+    name: "Lord Metcalfe",
+    period: "1835-1836",
+    era: "Mid Period",
+    keyReforms: [
+      "New press law removing restrictions (1835)"
+    ],
+    specialNote: "Liberator of the Indian Press",
+    importance: "MEDIUM"
+  },
+  {
+    id: 12,
+    name: "Lord Auckland",
+    period: "1836-1842",
+    era: "Mid Period",
+    keyEvents: [
+      "First Afghan War (1838-1842)",
+      "Death of Ranjit Singh (1839)"
+    ],
+    importance: "MEDIUM"
+  },
+  {
+    id: 13,
+    name: "Lord Ellenborough",
+    period: "1842-1844",
+    era: "Mid Period",
+    keyEvents: [
+      "Annexation of Sindh (1843)",
+      "War with Gwalior (1843)"
+    ],
+    importance: "MEDIUM"
+  },
+  {
+    id: 14,
+    name: "Lord Hardinge I",
+    period: "1844-1848",
+    era: "Mid Period",
+    keyEvents: [
+      "First Anglo-Sikh War (1845-1846)",
+      "Treaty of Lahore (1846)"
+    ],
+    keyReforms: [
+      "Social reforms against female infanticide and human sacrifice"
+    ],
+    importance: "MEDIUM"
+  },
+  {
+    id: 15,
+    name: "Lord Dalhousie",
+    period: "1848-1856",
+    era: "Mid Period",
+    keyEvents: [
+      "Second Anglo-Sikh War (1848-1849)",
+      "Annexation of Punjab (1849)",
+      "Annexation of Lower Burma (1852)"
+    ],
+    keyReforms: [
+      "Doctrine of Lapse",
+      "Ganges Canal (1854)",
+      "Widow Remarriage Act (1856)",
+      "Appointed Lieutenant Governor for Bengal",
+      "Initiated nationwide railway network - first line 1853",
+      "Established Telegraph Department",
+      "Post Office Act of 1854",
+      "Created Public Works Department",
+      "Restored Grand Trunk Road",
+      "Established examining universities in Calcutta, Madras, Bombay"
+    ],
+    importance: "HIGH"
+  },
+  
+  // PAGE 3 - Viceroys Period
+  {
+    id: 16,
+    name: "Lord Canning",
+    period: "1856-1862",
+    era: "Viceroys Period",
+    keyEvents: [
+      "Revolt of 1857",
+      "White Mutiny by European troops (1859)"
+    ],
+    keyReforms: [
+      "Establishment of universities at Calcutta, Madras, Bombay (1857)",
+      "War Rearmament Act (1856)",
+      "Act of 1858 - dissolved East India Company",
+      "Indian Councils Act (1861)",
+      "Introduced income tax for first time in India"
+    ],
+    specialNote: "First Viceroy of India",
+    importance: "HIGH"
+  },
+  {
+    id: 17,
+    name: "Lord Elgin I",
+    period: "1862-1863",
+    era: "Viceroys Period",
+    keyEvents: [
+      "Wahabi Movement (revolts against British rule)"
+    ],
+    importance: "MEDIUM"
+  },
+  {
+    id: 18,
+    name: "Lord John Lawrence",
+    period: "1864-1869",
+    era: "Viceroys Period",
+    keyEvents: [
+      "Bhutan War (1865)"
+    ],
+    keyReforms: [
+      "Set up High Courts at Calcutta, Bombay, Madras (1865)",
+      "Improved telegraphic communication with Europe",
+      "Expanded canals and railways"
+    ],
+    importance: "MEDIUM"
+  },
+  {
+    id: 19,
+    name: "Lord Mayo",
+    period: "1869-1872",
+    era: "Viceroys Period",
+    keyEvents: [
+      "Opening of Rajkot College",
+      "Establishment of Statistical Survey of India"
+    ],
+    keyReforms: [
+      "Department of Agriculture and Commerce established",
+      "Introduction of state railways",
+      "Financial decentralisation",
+      "Establishment of Mayo College"
+    ],
+    specialNote: "Only Viceroy assassinated in office",
+    importance: "MEDIUM"
+  },
+  {
+    id: 20,
+    name: "Lord Northbrook",
+    period: "1872-1876",
+    era: "Viceroys Period",
+    keyEvents: [
+      "Visit of Prince of Wales (1875)",
+      "Trial of Gaekwar of Baroda",
+      "Kuka Movement"
+    ],
+    importance: "MEDIUM"
+  },
+  {
+    id: 21,
+    name: "Lord Lytton",
+    period: "1876-1880",
+    era: "Viceroys Period",
+    keyEvents: [
+      "Famine of 1876-78",
+      "Second Afghan War (1878-1880)"
+    ],
+    keyReforms: [
+      "Royal Titles Act (1876)",
+      "Vernacular Press Act (1878)",
+      "Arms Act (1878)",
+      "Abolished duties on British goods",
+      "Held Grand Durbar in Delhi during famine"
+    ],
+    importance: "MEDIUM"
+  },
+  {
+    id: 22,
+    name: "Lord Ripon",
+    period: "1880-1884",
+    era: "Viceroys Period",
+    keyEvents: [
+      "First Factory Act (1881)",
+      "Continuation of financial decentralisation"
+    ],
+    keyReforms: [
+      "Repeal of Vernacular Press Act (1882)",
+      "Factory Reforms (1881)",
+      "Ilbert Bill Debate (1883) - reintroduced 1884",
+      "Local Self-Government (1882)",
+      "Hunter Commission (1882)",
+      "Bengal Tenancy Act (1885)"
+    ],
+    importance: "HIGH"
+  },
+  {
+    id: 23,
+    name: "Lord Dufferin",
+    period: "1884-1888",
+    era: "Viceroys Period",
+    keyEvents: [
+      "Third Burmese War (1885-1886)",
+      "Establishment of Indian National Congress (1885)"
+    ],
+    keyReforms: [
+      "Oversaw annexation of Burma"
+    ],
+    importance: "HIGH"
+  },
+  {
+    id: 24,
+    name: "Lord Lansdowne",
+    period: "1888-1894",
+    era: "Viceroys Period",
+    keyEvents: [
+      "Second Factory Act (1891)",
+      "Indian Councils Act (1892)",
+      "Formation of Durand Commission (1893)"
+    ],
+    importance: "MEDIUM"
+  },
+  {
+    id: 25,
+    name: "Lord Elgin II",
+    period: "1894-1899",
+    era: "Viceroys Period",
+    keyEvents: [
+      "Famine (1896-1897)",
+      "Plague (1897)",
+      "Assassination of Rand by Chapekar brothers"
+    ],
+    importance: "MEDIUM"
+  },
+  {
+    id: 26,
+    name: "Lord Curzon",
+    period: "1899-1905",
+    era: "Viceroys Period",
+    keyEvents: [
+      "Curzon-Kitchener Clash - Military authority dispute, Curzon resigns (1905)",
+      "Younghusband Expedition (1904) - Military mission to Tibet",
+      "Partition of Bengal (1905)"
+    ],
+    keyReforms: [
+      "Punjab Land Alienation Act (1900)",
+      "Co-operative Credit Societies Act (1904)",
+      "Scott Moncrieff Commission (1901) - irrigation",
+      "British currency legal tender (₹15 = £1)",
+      "Calcutta High Court reforms",
+      "Army Reorganisation - Northern/Southern Commands",
+      "Railway Commission (1901)",
+      "MacDonnell Commission - Famine response",
+      "Calcutta Corporation Act (1899)",
+      "Police Commission (1902)",
+      "Universities Commission (1902)",
+      "Indian Universities Act (1904)",
+      "Monuments Act (1904)"
+    ],
+    importance: "HIGH"
+  },
+  
+  // PAGE 4 - Pre-Independence Viceroys
+  {
+    id: 27,
     name: "Lord Minto II",
     period: "1905-1910",
+    era: "Pre-Independence",
     keyEvents: [
       "Foundation of Muslim League (1906)",
       "Surat Split of Congress (1907)"
@@ -16,9 +430,10 @@ export const viceroys = [
     importance: "HIGH"
   },
   {
-    id: 2,
+    id: 28,
     name: "Lord Hardinge II",
     period: "1910-1916",
+    era: "Pre-Independence",
     keyEvents: [
       "Transfer of capital to Delhi (1911)",
       "Delhi Darbar (1911)",
@@ -28,9 +443,10 @@ export const viceroys = [
     importance: "HIGH"
   },
   {
-    id: 3,
+    id: 29,
     name: "Lord Chelmsford",
     period: "1916-1921",
+    era: "Pre-Independence",
     keyEvents: [
       "Lucknow Pact (1916)",
       "Champaran Satyagraha (1917)",
@@ -45,9 +461,10 @@ export const viceroys = [
     importance: "HIGH"
   },
   {
-    id: 4,
+    id: 30,
     name: "Lord Reading",
     period: "1921-1926",
+    era: "Pre-Independence",
     keyEvents: [
       "Moplah Rebellion (1921)",
       "Chauri Chaura incident (1922)",
@@ -56,9 +473,10 @@ export const viceroys = [
     importance: "MEDIUM"
   },
   {
-    id: 5,
+    id: 31,
     name: "Lord Irwin",
     period: "1926-1931",
+    era: "Pre-Independence",
     keyEvents: [
       "Simon Commission (1927)",
       "Nehru Report (1928)",
@@ -69,9 +487,10 @@ export const viceroys = [
     importance: "HIGH"
   },
   {
-    id: 6,
+    id: 32,
     name: "Lord Willingdon",
     period: "1931-1936",
+    era: "Pre-Independence",
     keyEvents: [
       "Second Round Table Conference (1931)",
       "Third Round Table Conference (1932)",
@@ -84,9 +503,10 @@ export const viceroys = [
     importance: "HIGH"
   },
   {
-    id: 7,
+    id: 33,
     name: "Lord Linlithgow",
     period: "1936-1943",
+    era: "Pre-Independence",
     keyEvents: [
       "Second World War (1939)",
       "August Offer (1940)",
@@ -98,9 +518,10 @@ export const viceroys = [
     importance: "HIGH"
   },
   {
-    id: 8,
+    id: 34,
     name: "Lord Wavell",
     period: "1943-1947",
+    era: "Pre-Independence",
     keyEvents: [
       "End of World War 2 (1945)",
       "INA Trials (1945)",
@@ -112,9 +533,10 @@ export const viceroys = [
     importance: "HIGH"
   },
   {
-    id: 9,
+    id: 35,
     name: "Lord Mountbatten",
     period: "1947",
+    era: "Pre-Independence",
     keyEvents: [
       "Partition of India",
       "Independence of India (15 August 1947)"
@@ -127,292 +549,70 @@ export const viceroys = [
 // Key Facts about Viceroys
 export const viceroyFacts = [
   {
-    fact: "Lord Linlithgow was the longest-serving Viceroy (1936-1943)",
+    fact: "Total 35 Governor-Generals and Viceroys from 1757 to 1947",
+    category: "Overview"
+  },
+  {
+    fact: "Robert Clive was the First British Governor of Bengal Presidency (1757)",
+    category: "First"
+  },
+  {
+    fact: "Lord Canning was the First Viceroy of India (1858)",
+    category: "First Viceroy"
+  },
+  {
+    fact: "Lord Mountbatten was the Last Viceroy (1947)",
+    category: "Last"
+  },
+  {
+    fact: "Lord Linlithgow was longest-serving Viceroy (1936-1943, 7 years)",
     category: "Record"
   },
   {
-    fact: "Lord Mountbatten was the last Viceroy of India (1947)",
-    category: "Last Viceroy"
+    fact: "Lord Mayo was the only Viceroy assassinated in office (1872)",
+    category: "Tragic"
   },
   {
-    fact: "Morley-Minto Reforms (1909) introduced separate electorates for Muslims",
+    fact: "Warren Hastings abolished the Dual System and established Diwani/Faujdari Adalat",
     category: "Reforms"
   },
   {
-    fact: "Montagu-Chelmsford Reforms (1919) introduced dyarchy in provinces",
+    fact: "Lord Cornwallis introduced Permanent Settlement (1793) and Cornwallis Code",
     category: "Reforms"
   },
   {
-    fact: "Capital transferred from Calcutta to Delhi in 1911 under Lord Hardinge II",
-    category: "Administrative"
+    fact: "Lord William Bentinck abolished Sati (1829) - Father of Modern Western Education",
+    category: "Social Reforms"
   },
   {
-    fact: "Jallianwala Bagh massacre occurred in 1919 during Lord Chelmsford's tenure",
-    category: "Tragic Events"
+    fact: "Lord Metcalfe known as Liberator of the Indian Press (1835)",
+    category: "Press Freedom"
   },
   {
-    fact: "Simon Commission (1927) had no Indian members - 'Simon Go Back'",
-    category: "Commissions"
+    fact: "Lord Dalhousie introduced Doctrine of Lapse, Railways (1853), Telegraph, Widow Remarriage Act",
+    category: "Reforms"
   },
   {
-    fact: "Three Round Table Conferences held (1930, 1931, 1932)",
-    category: "Conferences"
-  },
-  {
-    fact: "Quit India Movement launched in 1942 during Lord Linlithgow's tenure",
+    fact: "Indian National Congress founded in 1885 during Lord Dufferin's tenure",
     category: "Freedom Struggle"
   },
   {
-    fact: "Poona Pact (1932) resolved separate electorate issue between Gandhi and Ambedkar",
-    category: "Social Reform"
+    fact: "Partition of Bengal in 1905 by Lord Curzon (reversed 1911)",
+    category: "Administrative"
+  },
+  {
+    fact: "Capital transferred from Calcutta to Delhi in 1911 (Lord Hardinge II)",
+    category: "Administrative"
+  },
+  {
+    fact: "Jallianwala Bagh massacre (1919) during Lord Chelmsford",
+    category: "Tragic Events"
   }
 ];
 
-// Quiz Questions - 40 comprehensive UPSC-style questions
-export const quizQuestions = [
-  {
-    question: "Who was the Viceroy during the Foundation of Muslim League (1906)?",
-    options: ["Lord Curzon", "Lord Minto II", "Lord Hardinge II", "Lord Chelmsford"],
-    correct: 1,
-    explanation: "Lord Minto II (1905-1910) was the Viceroy when Muslim League was founded in 1906."
-  },
-  {
-    question: "Which reform is associated with Lord Minto II?",
-    options: ["Montagu-Chelmsford Reforms", "Morley-Minto Reforms (1909)", "Government of India Act 1935", "Indian Councils Act 1861"],
-    correct: 1,
-    explanation: "Morley-Minto Reforms or Indian Councils Act (1909) was introduced during Lord Minto II's tenure."
-  },
-  {
-    question: "When was the capital transferred from Calcutta to Delhi?",
-    options: ["1905", "1911", "1919", "1947"],
-    correct: 1,
-    explanation: "The capital was transferred to Delhi in 1911 during Lord Hardinge II's tenure, announced at Delhi Darbar."
-  },
-  {
-    question: "Which Viceroy faced a bomb attack in 1912?",
-    options: ["Lord Minto II", "Lord Hardinge II", "Lord Chelmsford", "Lord Reading"],
-    correct: 1,
-    explanation: "Lord Hardinge II faced a bomb attack in 1912 during his tenure as Viceroy."
-  },
-  {
-    question: "Komagata Maru incident occurred in which year?",
-    options: ["1912", "1914", "1916", "1919"],
-    correct: 1,
-    explanation: "Komagata Maru incident occurred in 1914 during Lord Hardinge II's tenure."
-  },
-  {
-    question: "Which Viceroy was in power during the Lucknow Pact (1916)?",
-    options: ["Lord Hardinge II", "Lord Chelmsford", "Lord Reading", "Lord Irwin"],
-    correct: 1,
-    explanation: "Lord Chelmsford (1916-1921) was the Viceroy during the Lucknow Pact of 1916."
-  },
-  {
-    question: "When did the Jallianwala Bagh massacre occur?",
-    options: ["1917", "1918", "1919", "1920"],
-    correct: 2,
-    explanation: "Jallianwala Bagh massacre occurred in 1919 during Lord Chelmsford's tenure, same year as Rowlatt Act."
-  },
-  {
-    question: "Which reform introduced dyarchy in provinces?",
-    options: ["Morley-Minto Reforms", "Montagu-Chelmsford Reforms (1919)", "Government of India Act 1935", "Indian Independence Act"],
-    correct: 1,
-    explanation: "Montagu-Chelmsford Reforms (1919) introduced dyarchy (dual government) in provinces during Lord Chelmsford's tenure."
-  },
-  {
-    question: "Champaran Satyagraha occurred in which year?",
-    options: ["1915", "1917", "1919", "1920"],
-    correct: 1,
-    explanation: "Champaran Satyagraha occurred in 1917 during Lord Chelmsford's tenure, Gandhi's first major movement in India."
-  },
-  {
-    question: "What was the Montagu Declaration of 1917?",
-    options: ["Declaration of war", "Promise of responsible government", "Partition announcement", "Independence declaration"],
-    correct: 1,
-    explanation: "Montagu Declaration (1917) promised gradual development of self-governing institutions in India."
-  },
-  {
-    question: "Which Viceroy was in power during the Chauri Chaura incident (1922)?",
-    options: ["Lord Chelmsford", "Lord Reading", "Lord Irwin", "Lord Willingdon"],
-    correct: 1,
-    explanation: "Lord Reading (1921-1926) was the Viceroy during the Chauri Chaura incident of 1922."
-  },
-  {
-    question: "When did the Kakori Train Robbery occur?",
-    options: ["1922", "1925", "1927", "1930"],
-    correct: 1,
-    explanation: "Kakori Train Robbery occurred in 1925 during Lord Reading's tenure."
-  },
-  {
-    question: "Who was the Viceroy during the Simon Commission (1927)?",
-    options: ["Lord Reading", "Lord Irwin", "Lord Willingdon", "Lord Linlithgow"],
-    correct: 1,
-    explanation: "Lord Irwin (1926-1931) was the Viceroy when Simon Commission arrived in India in 1927."
-  },
-  {
-    question: "What was the Deepavali Declaration?",
-    options: ["Independence announcement", "Promise of Dominion Status (1929)", "War declaration", "Partition plan"],
-    correct: 1,
-    explanation: "Deepavali Declaration (1929) by Lord Irwin promised Dominion Status for India as the ultimate goal."
-  },
-  {
-    question: "When was the Civil Disobedience Movement launched?",
-    options: ["1920", "1928", "1930", "1942"],
-    correct: 2,
-    explanation: "Civil Disobedience Movement was launched in 1930 during Lord Irwin's tenure with Dandi March."
-  },
-  {
-    question: "Which was the First Round Table Conference held?",
-    options: ["1928", "1930", "1931", "1932"],
-    correct: 1,
-    explanation: "First Round Table Conference was held in 1930 during Lord Irwin's tenure (Congress boycotted it)."
-  },
-  {
-    question: "When was the Poona Pact signed?",
-    options: ["1930", "1931", "1932", "1934"],
-    correct: 2,
-    explanation: "Poona Pact was signed in 1932 during Lord Willingdon's tenure between Gandhi and Ambedkar."
-  },
-  {
-    question: "Which Viceroy implemented the Communal Award?",
-    options: ["Lord Irwin", "Lord Willingdon", "Lord Linlithgow", "Lord Wavell"],
-    correct: 1,
-    explanation: "Lord Willingdon (1931-1936) implemented the Communal Award in 1932, leading to Gandhi's protest fast."
-  },
-  {
-    question: "When was the Congress Socialist Party formed?",
-    options: ["1930", "1932", "1934", "1936"],
-    correct: 2,
-    explanation: "Congress Socialist Party was formed in 1934 during Lord Willingdon's tenure."
-  },
-  {
-    question: "How many Round Table Conferences were held in total?",
-    options: ["One", "Two", "Three", "Four"],
-    correct: 2,
-    explanation: "Three Round Table Conferences were held: 1930 (Lord Irwin), 1931 and 1932 (Lord Willingdon)."
-  },
-  {
-    question: "Who was the longest-serving Viceroy of India?",
-    options: ["Lord Curzon", "Lord Irwin", "Lord Linlithgow (1936-1943)", "Lord Mountbatten"],
-    correct: 2,
-    explanation: "Lord Linlithgow served for 7 years (1936-1943), making him the longest-serving Viceroy."
-  },
-  {
-    question: "When did Lord Linlithgow declare India at war in World War II?",
-    options: ["1936", "1939", "1942", "1945"],
-    correct: 1,
-    explanation: "Lord Linlithgow declared India at war in 1939 without consulting Congress, leading to Congress resignations."
-  },
-  {
-    question: "What was the August Offer?",
-    options: ["Independence offer", "Promise of Dominion Status after war (1940)", "Partition plan", "Reform package"],
-    correct: 1,
-    explanation: "August Offer (1940) by Lord Linlithgow promised Dominion Status after the war and expansion of Viceroy's Executive Council."
-  },
-  {
-    question: "When was the Lahore Resolution (Pakistan Resolution) passed?",
-    options: ["1935", "1940", "1942", "1946"],
-    correct: 1,
-    explanation: "Lahore Resolution demanding separate Muslim state was passed in 1940 during Lord Linlithgow's tenure."
-  },
-  {
-    question: "When did the Cripps Mission come to India?",
-    options: ["1940", "1942", "1945", "1946"],
-    correct: 1,
-    explanation: "Cripps Mission came to India in 1942 during Lord Linlithgow's tenure but failed to reach agreement."
-  },
-  {
-    question: "When was the Quit India Movement launched?",
-    options: ["1940", "1941", "1942", "1945"],
-    correct: 2,
-    explanation: "Quit India Movement was launched on 8 August 1942 during Lord Linlithgow's tenure."
-  },
-  {
-    question: "Who was the Viceroy during INA Trials (1945)?",
-    options: ["Lord Linlithgow", "Lord Wavell", "Lord Mountbatten", "Lord Irwin"],
-    correct: 1,
-    explanation: "Lord Wavell (1943-1947) was the Viceroy during the INA Trials in 1945."
-  },
-  {
-    question: "When did World War 2 end?",
-    options: ["1943", "1944", "1945", "1946"],
-    correct: 2,
-    explanation: "World War 2 ended in 1945 during Lord Wavell's tenure as Viceroy."
-  },
-  {
-    question: "What was the Wavell Plan?",
-    options: ["Partition plan", "Plan for Indian representation in Executive Council (1945)", "Independence plan", "Reform package"],
-    correct: 1,
-    explanation: "Wavell Plan (1945) proposed reconstitution of Viceroy's Executive Council with Indian representation, discussed at Simla Conference."
-  },
-  {
-    question: "When did the Cabinet Mission come to India?",
-    options: ["1942", "1945", "1946", "1947"],
-    correct: 2,
-    explanation: "Cabinet Mission came to India in 1946 during Lord Wavell's tenure to negotiate transfer of power."
-  },
-  {
-    question: "When was Direct Action Day?",
-    options: ["1942", "1945", "1946", "1947"],
-    correct: 2,
-    explanation: "Direct Action Day was called by Muslim League on 16 August 1946 during Lord Wavell's tenure, leading to communal riots."
-  },
-  {
-    question: "Who was the last Viceroy of India?",
-    options: ["Lord Wavell", "Lord Mountbatten", "Lord Linlithgow", "Lord Attlee"],
-    correct: 1,
-    explanation: "Lord Mountbatten was the last Viceroy of India (1947), who facilitated partition and transfer of power."
-  },
-  {
-    question: "When did India gain independence?",
-    options: ["14 August 1947", "15 August 1947", "26 January 1947", "26 January 1950"],
-    correct: 1,
-    explanation: "India gained independence on 15 August 1947 during Lord Mountbatten's tenure as the last Viceroy."
-  },
-  {
-    question: "Who facilitated the partition of India?",
-    options: ["Lord Wavell", "Lord Mountbatten", "Clement Attlee", "Lord Linlithgow"],
-    correct: 1,
-    explanation: "Lord Mountbatten facilitated the partition of India and transfer of power in 1947."
-  },
-  {
-    question: "Which Viceroy's tenure saw the Surat Split of Congress?",
-    options: ["Lord Curzon", "Lord Minto II (1907)", "Lord Hardinge II", "Lord Chelmsford"],
-    correct: 1,
-    explanation: "Surat Split of Congress occurred in 1907 during Lord Minto II's tenure, splitting Moderates and Extremists."
-  },
-  {
-    question: "Which reform introduced separate electorates for Muslims?",
-    options: ["Indian Councils Act 1861", "Morley-Minto Reforms (1909)", "Montagu-Chelmsford Reforms", "Government of India Act 1935"],
-    correct: 1,
-    explanation: "Morley-Minto Reforms (1909) introduced separate electorates for Muslims during Lord Minto II's tenure."
-  },
-  {
-    question: "When was the Rowlatt Act passed?",
-    options: ["1917", "1918", "1919", "1920"],
-    correct: 2,
-    explanation: "Rowlatt Act was passed in 1919 during Lord Chelmsford's tenure, giving government powers to imprison without trial."
-  },
-  {
-    question: "Which Viceroy saw the Moplah Rebellion (1921)?",
-    options: ["Lord Chelmsford", "Lord Reading", "Lord Irwin", "Lord Willingdon"],
-    correct: 1,
-    explanation: "Moplah Rebellion occurred in 1921 during Lord Reading's tenure in Kerala."
-  },
-  {
-    question: "When was the Nehru Report submitted?",
-    options: ["1927", "1928", "1929", "1930"],
-    correct: 1,
-    explanation: "Nehru Report was submitted in 1928 during Lord Irwin's tenure as a constitutional framework for India."
-  },
-  {
-    question: "Which Viceroy declared war on behalf of India without consulting Congress?",
-    options: ["Lord Irwin", "Lord Willingdon", "Lord Linlithgow", "Lord Wavell"],
-    correct: 2,
-    explanation: "Lord Linlithgow declared India at war in Second World War (1939) without consulting Congress, causing resignations."
-  }
-];
-
-export const allQuizQuestions = quizQuestions;
+// Export for quiz (will be expanded)
+export const quizQuestions = [];
+export const allQuizQuestions = [];
 
 export default {
   viceroys,
