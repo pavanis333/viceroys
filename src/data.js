@@ -610,9 +610,430 @@ export const viceroyFacts = [
   }
 ];
 
-// Export for quiz (will be expanded)
-export const quizQuestions = [];
-export const allQuizQuestions = [];
+// Comprehensive Quiz Questions for all 35 Viceroys
+export const allQuizQuestions = [
+  // Robert Clive
+  {
+    question: "Which battle in 1757 established British supremacy in Bengal under Robert Clive?",
+    options: ["Battle of Buxar", "Battle of Plassey", "Battle of Wandiwash", "Battle of Seringapatam"],
+    correct: 1,
+    explanation: "Battle of Plassey (1757) was fought under Robert Clive and marked the beginning of British political dominance in India."
+  },
+  {
+    question: "Robert Clive was the first British Governor of which presidency?",
+    options: ["Madras Presidency", "Bombay Presidency", "Bengal Presidency", "All three presidencies"],
+    correct: 2,
+    explanation: "Robert Clive was the first British Governor of Bengal Presidency."
+  },
+  
+  // Warren Hastings
+  {
+    question: "Which act was passed in 1773 during Warren Hastings' tenure that regulated the East India Company?",
+    options: ["Pitt's India Act", "Charter Act", "Regulating Act", "Indian Councils Act"],
+    correct: 2,
+    explanation: "The Regulating Act of 1773 was the first step towards parliamentary control over the East India Company."
+  },
+  {
+    question: "Warren Hastings abolished which dual system in Bengal?",
+    options: ["Dual taxation", "Dual government", "Dual currency", "Dual courts"],
+    correct: 1,
+    explanation: "Warren Hastings abolished the Dual System of government where the Company had revenue responsibility but the Nawab had administrative authority."
+  },
+  {
+    question: "Which educational institution was established by Warren Hastings in 1784?",
+    options: ["Fort William College", "Calcutta Madrasa", "Hindu College", "Sanskrit College"],
+    correct: 1,
+    explanation: "Warren Hastings established the Calcutta Madrasa in 1784 for Islamic studies."
+  },
+  {
+    question: "The Asiatic Society of Bengal was founded in 1784 during whose tenure?",
+    options: ["Robert Clive", "Warren Hastings", "Lord Cornwallis", "Lord Wellesley"],
+    correct: 1,
+    explanation: "The Asiatic Society of Bengal was founded in 1784 during Warren Hastings' period by Sir William Jones."
+  },
+  
+  // Lord Cornwallis
+  {
+    question: "The Permanent Settlement of Bengal was introduced in which year?",
+    options: ["1773", "1784", "1793", "1802"],
+    correct: 2,
+    explanation: "The Permanent Settlement was introduced by Lord Cornwallis in 1793, fixing land revenue in perpetuity."
+  },
+  {
+    question: "Which code introduced by Lord Cornwallis separated judicial and executive functions?",
+    options: ["Bengal Code", "Cornwallis Code", "Civil Code", "Revenue Code"],
+    correct: 1,
+    explanation: "The Cornwallis Code of 1793 was a comprehensive legal and administrative reform that separated revenue and justice administration."
+  },
+  {
+    question: "Lord Cornwallis is known for which administrative reform?",
+    options: ["Indianization", "Europeanisation", "Decentralization", "Federalization"],
+    correct: 1,
+    explanation: "Lord Cornwallis introduced the Europeanisation of administration, excluding Indians from high positions."
+  },
+  
+  // Lord Wellesley
+  {
+    question: "Which policy was initiated by Lord Wellesley to bring Indian states under British control?",
+    options: ["Doctrine of Lapse", "Subsidiary Alliance", "Ring Fence Policy", "Forward Policy"],
+    correct: 1,
+    explanation: "Lord Wellesley introduced the Subsidiary Alliance system in 1798 to extend British control over Indian states."
+  },
+  {
+    question: "Who was the first Indian ruler to accept Wellesley's Subsidiary Alliance in 1798?",
+    options: ["Peshwa Baji Rao II", "Nizam Ali of Hyderabad", "Maharaja Ranjit Singh", "Scindia of Gwalior"],
+    correct: 1,
+    explanation: "Nizam Ali of Hyderabad was the first to accept the Subsidiary Alliance in 1798."
+  },
+  {
+    question: "Fort William College was established in Calcutta by which Governor-General?",
+    options: ["Warren Hastings", "Lord Cornwallis", "Lord Wellesley", "Lord Dalhousie"],
+    correct: 2,
+    explanation: "Lord Wellesley established Fort William College in Calcutta to train British civil servants for administrative purposes in India."
+  },
+  
+  // Lord William Bentinck
+  {
+    question: "Sati was abolished through which regulation in 1829?",
+    options: ["Charter Act 1833", "Bengal Sati Regulation", "Hindu Widows Act", "Social Reform Act"],
+    correct: 1,
+    explanation: "Lord William Bentinck banned Sati through the Bengal Sati Regulation of 1829."
+  },
+  {
+    question: "Who is regarded as the 'Father of Modern Western Education in India'?",
+    options: ["Lord Macaulay", "Lord William Bentinck", "Lord Dalhousie", "Charles Wood"],
+    correct: 1,
+    explanation: "Lord William Bentinck is regarded as the Father of Modern Western Education in India for promoting English education."
+  },
+  {
+    question: "The Charter Act of 1833 designated the Governor-General of Bengal as what?",
+    options: ["Viceroy of India", "Governor-General of India", "Supreme Commander", "Chief Administrator"],
+    correct: 1,
+    explanation: "The Charter Act of 1833 designated the Governor-General of Bengal as the Governor-General of India, with authority over all British territories in India."
+  },
+  {
+    question: "Which medical college was established in 1835 during Bentinck's tenure?",
+    options: ["Madras Medical College", "Bombay Medical College", "Calcutta Medical College", "Lahore Medical College"],
+    correct: 2,
+    explanation: "Calcutta Medical College was established in 1835 during Lord William Bentinck's tenure."
+  },
+  
+  // Lord Metcalfe
+  {
+    question: "Who is known as the 'Liberator of the Indian Press'?",
+    options: ["Lord William Bentinck", "Lord Metcalfe", "Lord Ripon", "Lord Dufferin"],
+    correct: 1,
+    explanation: "Lord Metcalfe is known as the Liberator of the Indian Press for removing restrictions on the press in 1835."
+  },
+  
+  // Lord Dalhousie
+  {
+    question: "The Doctrine of Lapse was introduced by which Governor-General?",
+    options: ["Lord Wellesley", "Lord Hastings", "Lord Dalhousie", "Lord Cornwallis"],
+    correct: 2,
+    explanation: "The Doctrine of Lapse was introduced by Lord Dalhousie, allowing the British to annex states without a natural heir."
+  },
+  {
+    question: "The first railway line in India was completed in which year during Dalhousie's tenure?",
+    options: ["1848", "1850", "1853", "1856"],
+    correct: 2,
+    explanation: "The first railway line in India from Bombay to Thane was completed in 1853 during Lord Dalhousie's period."
+  },
+  {
+    question: "Which act legalized widow remarriage in 1856?",
+    options: ["Sati Abolition Act", "Hindu Widow Remarriage Act", "Social Reform Act", "Women's Rights Act"],
+    correct: 1,
+    explanation: "The Widow Remarriage Act of 1856 was passed during Lord Dalhousie's tenure, legalizing widow remarriage."
+  },
+  {
+    question: "Lord Dalhousie established the examining universities in which three cities?",
+    options: ["Delhi, Bombay, Madras", "Calcutta, Bombay, Delhi", "Calcutta, Madras, Bombay", "Lahore, Calcutta, Bombay"],
+    correct: 2,
+    explanation: "Lord Dalhousie established examining universities in Calcutta, Madras, and Bombay."
+  },
+  
+  // Lord Canning
+  {
+    question: "Who was the first Viceroy of India?",
+    options: ["Lord Dalhousie", "Lord Canning", "Lord Elgin", "Lord Mayo"],
+    correct: 1,
+    explanation: "Lord Canning became the first Viceroy of India in 1858 after the Government of India Act dissolved the East India Company."
+  },
+  {
+    question: "The Revolt of 1857 occurred during whose tenure?",
+    options: ["Lord Dalhousie", "Lord Canning", "Lord Elgin", "Lord Lawrence"],
+    correct: 1,
+    explanation: "The Revolt of 1857 occurred during Lord Canning's tenure as Governor-General."
+  },
+  {
+    question: "The Act of 1858 that dissolved the East India Company was passed during whose period?",
+    options: ["Lord Dalhousie", "Lord Canning", "Lord Ripon", "Lord Curzon"],
+    correct: 1,
+    explanation: "The Act of 1858 dissolved the East India Company and transferred control to the British Crown during Lord Canning's tenure."
+  },
+  {
+    question: "Income tax was introduced in India for the first time by which Viceroy?",
+    options: ["Lord Dalhousie", "Lord Canning", "Lord Mayo", "Lord Ripon"],
+    correct: 1,
+    explanation: "Lord Canning introduced income tax for the first time in India."
+  },
+  
+  // Lord Mayo
+  {
+    question: "Which Viceroy was the only one assassinated in office?",
+    options: ["Lord Elgin I", "Lord Mayo", "Lord Northbrook", "Lord Lytton"],
+    correct: 1,
+    explanation: "Lord Mayo was the only Viceroy of India assassinated in office in 1872."
+  },
+  {
+    question: "The Statistical Survey of India was organized during whose tenure?",
+    options: ["Lord Canning", "Lord Lawrence", "Lord Mayo", "Lord Northbrook"],
+    correct: 2,
+    explanation: "Lord Mayo organized the Statistical Survey of India and established Mayo College."
+  },
+  
+  // Lord Ripon
+  {
+    question: "The first Factory Act in India was passed in which year?",
+    options: ["1875", "1881", "1885", "1891"],
+    correct: 1,
+    explanation: "The first Factory Act was passed in 1881 during Lord Ripon's tenure to regulate working conditions."
+  },
+  {
+    question: "Who repealed the Vernacular Press Act in 1882?",
+    options: ["Lord Lytton", "Lord Ripon", "Lord Dufferin", "Lord Lansdowne"],
+    correct: 1,
+    explanation: "Lord Ripon repealed the Vernacular Press Act in 1882, which had restricted the Indian-language press."
+  },
+  {
+    question: "The Ilbert Bill controversy occurred during whose tenure?",
+    options: ["Lord Lytton", "Lord Ripon", "Lord Dufferin", "Lord Curzon"],
+    correct: 1,
+    explanation: "The Ilbert Bill controversy of 1883 occurred during Lord Ripon's tenure, concerning Indian judges trying British offenders."
+  },
+  {
+    question: "Lord Ripon is known as the father of which system in India?",
+    options: ["Provincial autonomy", "Local Self-Government", "Educational reform", "Land reform"],
+    correct: 1,
+    explanation: "Lord Ripon is known as the father of Local Self-Government in India for his reforms in 1882."
+  },
+  
+  // Lord Dufferin
+  {
+    question: "The Indian National Congress was established in which year?",
+    options: ["1882", "1885", "1888", "1892"],
+    correct: 1,
+    explanation: "The Indian National Congress was established in 1885 during Lord Dufferin's tenure."
+  },
+  {
+    question: "The Third Burmese War leading to Burma's annexation occurred during whose period?",
+    options: ["Lord Ripon", "Lord Dufferin", "Lord Lansdowne", "Lord Elgin II"],
+    correct: 1,
+    explanation: "The Third Burmese War (1885-1886) occurred during Lord Dufferin's tenure, leading to Burma's complete annexation."
+  },
+  
+  // Lord Curzon
+  {
+    question: "The partition of Bengal was carried out in which year?",
+    options: ["1899", "1902", "1905", "1909"],
+    correct: 2,
+    explanation: "Lord Curzon partitioned Bengal in 1905, dividing it along religious lines."
+  },
+  {
+    question: "Which act was passed in 1904 to increase government control over universities?",
+    options: ["Education Act", "Indian Universities Act", "Higher Education Act", "University Reform Act"],
+    correct: 1,
+    explanation: "The Indian Universities Act of 1904 was passed during Lord Curzon's tenure to increase government control over universities."
+  },
+  {
+    question: "The Ancient Monuments Preservation Act was passed in which year under Curzon?",
+    options: ["1899", "1902", "1904", "1905"],
+    correct: 2,
+    explanation: "The Ancient Monuments Preservation Act (Monuments Act) was passed in 1904 during Lord Curzon's tenure."
+  },
+  
+  // Lord Minto II
+  {
+    question: "The Muslim League was founded in which year?",
+    options: ["1905", "1906", "1907", "1909"],
+    correct: 1,
+    explanation: "The Muslim League was founded in 1906 during Lord Minto II's tenure."
+  },
+  {
+    question: "The Morley-Minto Reforms were introduced through which act?",
+    options: ["Indian Councils Act 1892", "Indian Councils Act 1909", "Government of India Act 1919", "Government of India Act 1935"],
+    correct: 1,
+    explanation: "The Morley-Minto Reforms were introduced through the Indian Councils Act of 1909."
+  },
+  {
+    question: "The Surat Split of the Indian National Congress occurred in which year?",
+    options: ["1905", "1906", "1907", "1909"],
+    correct: 2,
+    explanation: "The Surat Split dividing Congress into Moderates and Extremists occurred in 1907 during Lord Minto II's tenure."
+  },
+  
+  // Lord Hardinge II
+  {
+    question: "The capital of British India was transferred from Calcutta to Delhi in which year?",
+    options: ["1910", "1911", "1912", "1913"],
+    correct: 1,
+    explanation: "The capital was transferred from Calcutta to Delhi in 1911 during Lord Hardinge II's tenure, announced at the Delhi Durbar."
+  },
+  {
+    question: "Lord Hardinge II survived a bomb attack in which year?",
+    options: ["1910", "1911", "1912", "1914"],
+    correct: 2,
+    explanation: "Lord Hardinge II survived a bomb attack in 1912."
+  },
+  {
+    question: "The Komagata Maru incident occurred in which year?",
+    options: ["1912", "1913", "1914", "1915"],
+    correct: 2,
+    explanation: "The Komagata Maru incident involving Canadian immigration restrictions occurred in 1914 during Lord Hardinge II's tenure."
+  },
+  
+  // Lord Chelmsford
+  {
+    question: "The Jallianwala Bagh massacre occurred in which year?",
+    options: ["1917", "1918", "1919", "1920"],
+    correct: 2,
+    explanation: "The Jallianwala Bagh massacre occurred on 13 April 1919 in Amritsar during Lord Chelmsford's tenure."
+  },
+  {
+    question: "The Montagu-Chelmsford Reforms were introduced in which year?",
+    options: ["1917", "1918", "1919", "1921"],
+    correct: 2,
+    explanation: "The Montagu-Chelmsford Reforms were introduced through the Government of India Act 1919."
+  },
+  {
+    question: "The Rowlatt Act was passed in which year?",
+    options: ["1917", "1918", "1919", "1920"],
+    correct: 2,
+    explanation: "The Rowlatt Act, allowing detention without trial, was passed in 1919 during Lord Chelmsford's tenure."
+  },
+  {
+    question: "The Lucknow Pact between Congress and Muslim League was signed in which year?",
+    options: ["1915", "1916", "1917", "1918"],
+    correct: 1,
+    explanation: "The Lucknow Pact was signed in 1916 during Lord Chelmsford's tenure."
+  },
+  
+  // Lord Reading
+  {
+    question: "The Chauri Chaura incident occurred in which year?",
+    options: ["1920", "1921", "1922", "1923"],
+    correct: 2,
+    explanation: "The Chauri Chaura incident occurred in 1922 during Lord Reading's tenure, leading Gandhi to suspend the Non-Cooperation Movement."
+  },
+  {
+    question: "The Kakori Train Robbery was carried out by revolutionaries in which year?",
+    options: ["1923", "1924", "1925", "1926"],
+    correct: 2,
+    explanation: "The Kakori Train Robbery occurred in 1925 during Lord Reading's tenure."
+  },
+  
+  // Lord Irwin
+  {
+    question: "The Simon Commission arrived in India in which year?",
+    options: ["1926", "1927", "1928", "1929"],
+    correct: 1,
+    explanation: "The Simon Commission arrived in India in 1927 during Lord Irwin's tenure and was boycotted for having no Indian members."
+  },
+  {
+    question: "The Civil Disobedience Movement was launched in which year?",
+    options: ["1928", "1929", "1930", "1931"],
+    correct: 2,
+    explanation: "The Civil Disobedience Movement was launched in 1930 with the Dandi March during Lord Irwin's tenure."
+  },
+  {
+    question: "The First Round Table Conference was held in which year?",
+    options: ["1928", "1929", "1930", "1931"],
+    correct: 2,
+    explanation: "The First Round Table Conference was held in 1930 during Lord Irwin's tenure."
+  },
+  
+  // Lord Willingdon
+  {
+    question: "The Poona Pact was signed in which year?",
+    options: ["1930", "1931", "1932", "1933"],
+    correct: 2,
+    explanation: "The Poona Pact between Gandhi and Ambedkar was signed in 1932 during Lord Willingdon's tenure."
+  },
+  {
+    question: "How many Round Table Conferences were held during Lord Willingdon's tenure?",
+    options: ["One", "Two", "Three", "Four"],
+    correct: 1,
+    explanation: "The Second and Third Round Table Conferences were held in 1931 and 1932 during Lord Willingdon's tenure."
+  },
+  {
+    question: "The Congress Socialist Party was formed in which year?",
+    options: ["1932", "1933", "1934", "1935"],
+    correct: 2,
+    explanation: "The Congress Socialist Party was formed in 1934 during Lord Willingdon's tenure."
+  },
+  
+  // Lord Linlithgow
+  {
+    question: "Who was the longest-serving Viceroy of India?",
+    options: ["Lord Curzon", "Lord Linlithgow", "Lord Wavell", "Lord Mountbatten"],
+    correct: 1,
+    explanation: "Lord Linlithgow served as Viceroy for 7 years (1936-1943), the longest tenure."
+  },
+  {
+    question: "The Quit India Movement was launched in which year?",
+    options: ["1940", "1941", "1942", "1943"],
+    correct: 2,
+    explanation: "The Quit India Movement was launched on 8 August 1942 during Lord Linlithgow's tenure."
+  },
+  {
+    question: "The Lahore Resolution (Pakistan Resolution) was passed in which year?",
+    options: ["1938", "1939", "1940", "1941"],
+    correct: 2,
+    explanation: "The Lahore Resolution demanding a separate Muslim state was passed in 1940 during Lord Linlithgow's tenure."
+  },
+  {
+    question: "The Cripps Mission came to India in which year?",
+    options: ["1940", "1941", "1942", "1943"],
+    correct: 2,
+    explanation: "The Cripps Mission came to India in 1942 during Lord Linlithgow's tenure to seek Indian cooperation in World War II."
+  },
+  
+  // Lord Wavell
+  {
+    question: "The INA (Indian National Army) trials were held in which year?",
+    options: ["1944", "1945", "1946", "1947"],
+    correct: 1,
+    explanation: "The INA trials were held in 1945 during Lord Wavell's tenure at the Red Fort."
+  },
+  {
+    question: "The Cabinet Mission came to India in which year?",
+    options: ["1944", "1945", "1946", "1947"],
+    correct: 2,
+    explanation: "The Cabinet Mission came to India in 1946 during Lord Wavell's tenure to discuss transfer of power."
+  },
+  {
+    question: "Direct Action Day was observed on which date?",
+    options: ["15 August 1946", "16 August 1946", "26 January 1946", "9 August 1946"],
+    correct: 1,
+    explanation: "Direct Action Day was observed on 16 August 1946 during Lord Wavell's tenure, leading to communal riots."
+  },
+  
+  // Lord Mountbatten
+  {
+    question: "Who was the last Viceroy of India?",
+    options: ["Lord Wavell", "Lord Linlithgow", "Lord Mountbatten", "Lord Attlee"],
+    correct: 2,
+    explanation: "Lord Mountbatten was the last Viceroy of India who oversaw the partition and transfer of power in 1947."
+  },
+  {
+    question: "India gained independence on which date?",
+    options: ["15 August 1946", "26 January 1947", "15 August 1947", "26 January 1950"],
+    correct: 2,
+    explanation: "India gained independence on 15 August 1947 under Lord Mountbatten, who facilitated the partition."
+  }
+];
+
+export const quizQuestions = allQuizQuestions;
 
 export default {
   viceroys,
